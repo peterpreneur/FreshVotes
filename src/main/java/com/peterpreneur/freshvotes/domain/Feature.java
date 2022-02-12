@@ -7,6 +7,7 @@ import javax.persistence.Id;
 
 @Entity
 public class Feature {
+	
 	private Long id;
 	private String title;
 	private String description;
