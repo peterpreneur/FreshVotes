@@ -12,4 +12,9 @@ public class DashboardController {
 	public String rootView(){
 		return "index";
 	}
+
+	@GetMapping(value="/dashboard")	
+	public String dashboard(){
+		return "dashboard";
+	}	
 }
