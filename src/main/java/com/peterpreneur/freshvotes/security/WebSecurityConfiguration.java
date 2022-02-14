@@ -26,10 +26,13 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 		auth
 			.userDetailsService(userDetailsService)
 			.passwordEncoder(getPasswordEncoder());
+		
 		/*
-		 * auth.inMemoryAuthentication() .passwordEncoder(getPasswordEncoder())
-		 * .withUser("peter") .password(getPasswordEncoder().encode("peter"))
-		 * .roles("USER");
+		 * auth.inMemoryAuthentication() 
+		 * 		.passwordEncoder(getPasswordEncoder())
+		 * 		.withUser("peter") 
+		 * 		.password(getPasswordEncoder().encode("peter"))
+		 * 		.roles("USER");
 		 */
 	}
 	
@@ -39,8 +42,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 			//.csrf().disable()
 			.authorizeRequests()
 				.antMatchers("/").permitAll()
-				.anyRequest().hasRole("USER")
-				.and()
+				.anyRequest().hasRole("USER").and()
 			.formLogin()
 				.loginPage("/login")
 				.defaultSuccessUrl("/dashboard")

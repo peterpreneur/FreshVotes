@@ -3,9 +3,7 @@ package com.peterpreneur.freshvotes.security;
 
 
 import java.util.Set;
-
 import org.springframework.security.core.userdetails.UserDetails;
-
 import com.peterpreneur.freshvotes.domain.User;
 
 public class CustomSecurityUser extends User implements UserDetails {
@@ -56,5 +54,4 @@ public class CustomSecurityUser extends User implements UserDetails {
 	public boolean isEnabled() {
 		return true;
 	}
-
 }
